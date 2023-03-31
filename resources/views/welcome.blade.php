@@ -13,12 +13,12 @@
                 </ol>
             </nav>
             <div class="row d-flex flex-row-reverse">
-                <div class="col-12 col-lg-7 px-5">
-                    <iframe src="http://www.youtube.com/embed/VxwoLmQwwsI" frameborder="0" width="100%" height="100%"></iframe>
+                <div class="embed-responsive embed-responsive-1by1 col-12 col-lg-7 px-5">
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/-_hKLLiLCT4" frameborder="0" width="100%" height="100%"></iframe>
                 </div>
                 <div class="col-12 col-lg-5 px-5">
                     <div class="row">
-                        <div class="col-12 col-lg-3">
+                        <div class="col-12 col-lg-3 mt-3">
                             <h1 class="text-white" style="font-size: 7em; line-height: 80%;">
                                 UMB
                                 Digital
@@ -26,7 +26,7 @@
                             </h1>
                             <div class="bg-white" style="height: 15px; opacity: 0.4"></div>
 
-                            <a href="/yearbook" class="btn btn-lg btn-download rounded-pill px-5 py-3 mt-4">DOWNLOAD</a>
+                            <a href="/yearbook" class="btn btn-lg btn-download rounded-pill px-5 py-2 mt-5">DOWNLOAD</a>
                         </div>
                     </div>
                 </div>
@@ -53,13 +53,13 @@
                 @foreach($items as $item)
                     <div class=" {{$loop->first ? 'carousel-item active' : 'carousel-item'}}">
                         <div class="row">
-                            <div class="col-7">
-                                <img src="https://images.unsplash.com/photo-1604005758898-76693c7ceb3d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2756&q=80" class="rounded-lg" alt="Image" width="100%">
+                            <div class="col-lg-6 col-md-12 col-sm-12">
+                                <img src="{{$item->image}}" class="rounded-lg" alt="Image" width="100%">
                             </div>
-                            <div class="col-4">
-                                <div class="d-flex justify-content-start align-items-center">
+                            <div class="col-lg-6 col-md-12 col-sm-12">
+                                <div class="d-flex justify-content-start align-items-center mt-5">
                                     <img src="img/logo.png" alt="logo-image" height="40">
-                                    <div class="bg-umb-blue ml-3" style="width: 20px; height: 1px;"></div>
+                                    <div class="bg-grey ml-3" style="width: 20px; height: 1px;"></div>
                                     <h5 class="font-weight-lighter ml-3 mt-3" style="line-height: 10px;">WISUDAWAN TERBAIK</h5>
                                 </div>
                                 <div>
@@ -81,13 +81,13 @@
                 @endforeach
                 </div>
                 <button class="carousel-control-prev" type="button" data-target="#carouselExampleIndicators" data-slide="prev">
-                    <div class="bg-umb-blue text-center d-flex justify-content-center p-4 rounded-circle">
+                    <div class="bg-grey text-center d-flex justify-content-center p-4 rounded-circle">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                     </div>
 
                 </button>
                 <button class="carousel-control-next" type="button" data-target="#carouselExampleIndicators" data-slide="next">
-                    <div class="bg-umb-blue text-center d-flex justify-content-center p-4 rounded-circle">
+                    <div class="bg-grey text-center d-flex justify-content-center p-4 rounded-circle">
                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     </div>
                 </button>

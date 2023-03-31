@@ -50,7 +50,7 @@
                 <!-- /.card -->
             </div>
         </div>
-        <div class="row">
+        <div class="row mb-3">
             <div class="col-12">
                 <a href="#" class="btn btn-secondary">Cancel</a>
                 <input type="submit" value="Add Mahasiswa Berprestasi" class="btn btn-success float-right">

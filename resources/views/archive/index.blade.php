@@ -9,11 +9,11 @@
         </div>
         <div class="row">
             @foreach ($years as $year)
-                <a href="{{url('archive/year'.'/'.$year->month.'/'.$year->year)}}" class="card mr-2 col-3 py-4 cursor-pointer" role="button">
-                    <h3 class="text-dark">
-                        {{date("F", mktime(0, 0, 0, $year->month, 1))}} {{$year->year}}
-                    </h3>
-                </a>
+            <a href="{{url('archive/year'.'/'.$year->month.'/'.$year->year)}}" class="card mr-2 mb-3 col-lg-3 col-md-3 col-sm-12 py-2 cursor-pointer text-decoration-none" role="button">
+                <h3 class="text-dark text-center">
+                    {{date("F", mktime(0, 0, 0, $year->month, 1))}} {{$year->year}}
+                </h3>
+            </a>
             @endforeach
         </div>
        

@@ -10,6 +10,7 @@ class LandingController extends Controller
     public function index()
     {
         $items = MahasiswaCarouselItem::all();
+        
         return view('welcome', compact('items'));
     }
 }

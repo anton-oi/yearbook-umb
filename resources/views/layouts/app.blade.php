@@ -31,7 +31,7 @@
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand text-umb-blue" href="{{ url('/') }}">
-                    <img src="{{asset('img/logo.png')}}" alt="logo-image" height="40">
+                    <img class="mb-3" src="{{asset('img/logo.png')}}" alt="logo-image" height="40">
                     <span class="text-umb-blue ml-1" style="font-size: 40px; letter-spacing: 5px;">YEARBOOK</span>
                 </a>
                 @can('add pdf')
@@ -160,7 +160,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12 col-md-6 col-sm-12 m-auto">
-                        <div class="text-black text-center"><a href="https://yearbookumb.com">COPYRIGHT</a> &copy;
+                        <div class="footer-content-text text-black text-center"><a href="https://yearbookumb.com">COPYRIGHT</a> &copy;
                             UNIVERSITAS MERCU BUANA, {{ date('Y') }} All Right Reserved</div>
                     </div>
                 </div>
