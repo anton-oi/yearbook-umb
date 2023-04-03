@@ -32,6 +32,7 @@ Route::middleware(['auth'])->group(function () {
             });
             Route::get('wisudawan/create', [AdminHomeController::class, 'createWisudawan'])->name('admin.create.wisudawan');
             Route::post('wisudawan', [AdminHomeController::class, 'storeWisudawan'])->name('admin.store.wisudawan');
+            Route::delete('wisudawan/{id}', [AdminHomeController::class, 'deleteWisudawan'])->name('admin.delete.wisudawan');
 
             Route::group(['prefix' => 'yearbook'], function() {
                 Route::get('', [AdminYearbookController::class, 'index'])->name('admin.yearbook.index');
