@@ -37,7 +37,7 @@ class AdminHomeController extends Controller
         }
 
         $mhs->mhs_name = $request->mhs_name;
-        $mhs->quote = $request->quote;
+        // $mhs->quote = $request->quote;
         $mhs->jurusan = $request->jurusan;
         $mhs->tingkat = $request->tingkat;
         $mhs->save();

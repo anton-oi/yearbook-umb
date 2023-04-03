@@ -33,9 +33,7 @@
                       <th style="width: 30%">
                           Study
                       </th>
-                      <th>
-                        Quote
-                      </th>
+                      
                       <th style="width: 8%" class="text-center">
                         Level
                       </th>
@@ -55,9 +53,7 @@
                       <td>
                           {{$carousel->jurusan}}
                       </td>
-                      <td class="project_progress">
-                          {{$carousel->quote}}
-                      </td>
+                      
                       <td class="project-state">
                           {{$carousel->tingkat}}
                       </td>

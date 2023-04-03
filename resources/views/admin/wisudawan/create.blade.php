@@ -28,10 +28,7 @@
                             <label for="inputName">Level (e.g. Tingkat Universitas)</label>
                             <input type="text" name="tingkat" id="inputName" class="form-control">
                         </div>
-                        <div class="form-group">
-                            <label for="inputName">Quote</label>
-                            <input type="text" name="quote" id="inputName" class="form-control">
-                        </div>
+                       
                         <div class="form-group">
                             <label for="exampleInputFile">Photo</label>
                             <div class="input-group">
