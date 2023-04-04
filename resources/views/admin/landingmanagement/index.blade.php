@@ -62,11 +62,17 @@
                           {{$carousel->tingkat}}
                       </td>
                       <td class="project-actions text-right">
-                          <a class="btn btn-danger btn-sm" href="#">
+                        <a class="btn btn-danger btn-sm" href="#">
+                        <form method="POST" action="{{route('admin.delete.wisudawan', $carousel->id)}}">
+                          @csrf
+                          <input type="hidden" name="_method" value="DELETE">
+                          <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Yakin hapus item ini ?')">
                               <i class="fas fa-trash">
                               </i>
                               Delete
                           </a>
+                          </button>
+                        </form>
                       </td>
                   </tr>
                   @endforeach

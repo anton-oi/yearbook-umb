@@ -161,7 +161,8 @@
                 <div class="row">
                     <div class="col-lg-12 col-md-6 col-sm-12 m-auto">
                         <div class="footer-content-text text-black text-center"><a href="https://yearbookumb.com">COPYRIGHT</a> &copy;
-                            UNIVERSITAS MERCU BUANA, {{ date('Y') }} All Right Reserved</div>
+                            UNIVERSITAS MERCU BUANA, {{ date('Y') }} All Right Reserved
+                        </div>
                     </div>
                 </div>
             </div>

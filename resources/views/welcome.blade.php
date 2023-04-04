@@ -12,7 +12,7 @@
                     <li class="breadcrumb-item active" aria-current="page">VIRTUAL TOUR</li>
                 </ol>
             </nav>
-            <div class="row d-flex flex-row-reverse">
+            <div class="row d-flex flex-row-reverse mb-5">
                 <div class="embed-responsive embed-responsive-1by1 col-12 col-lg-7 px-5">
                     <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/-_hKLLiLCT4" frameborder="0" width="100%" height="100%"></iframe>
                 </div>
@@ -37,7 +37,7 @@
     <div class="container p-5">
         <section class="border-bottom border-1 border-black my-5">
             <div class="text-center">
-                <h2 style="font-size: 5rem; letter-spacing: 3px;">Selamat Wisuda !</h2>
+                <h2 style="font-size: 3rem; letter-spacing: 3px;">Selamat Wisuda !</h2>
                 <p class="font-weight-light" style="font-size: 2em; letter-spacing: 3px;">Selamat datang menuju jalan yang baru. Kini saatnya untuk berjuang demi kehidupan di masa depan. </p>
             </div>
         </section>

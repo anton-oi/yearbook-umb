@@ -11007,7 +11007,8 @@ a.text-dark:focus {
 
 @media (min-width: 375px) {
   .bg-hero {
-    background: linear-gradient(90deg, #0d73ba 100%, #ffffff 40%);
+    /* background: linear-gradient(90deg, #0d73ba 100%, #ffffff 40%); */
+    background: url('../img/pattern_atas.png');
   }
 
   .nav-right-logo {
@@ -11017,7 +11018,8 @@ a.text-dark:focus {
 
 @media (min-width: 576px) {
   .bg-hero {
-    background-color: #0d73ba;
+    /* background-color: #0d73ba; */
+    background: url('../img/pattern_atas.png');
   }
 
   .nav-right-logo {
@@ -11027,7 +11029,8 @@ a.text-dark:focus {
 
 @media (min-width: 768px) {
   .bg-hero {
-    background-color: #0d73ba;
+    /* background-color: #0d73ba; */
+    background: url('../img/pattern_atas.png');
   }
 
   .nav-right-logo {
@@ -11037,7 +11040,9 @@ a.text-dark:focus {
 
 @media (min-width: 992px) {
   .bg-hero {
-    background: linear-gradient(90deg, #0d73ba 60%, #ffffff 40%);
+    /* background: linear-gradient(90deg, #0d73ba 60%, #ffffff 40%); */
+    background: linear-gradient(to right, rgba(255, 255, 255, 0) 60%, #ffffff 40%), 
+              url("../img/pattern_atas.png") center center/cover no-repeat;
   }
 
   .nav-right-logo {
@@ -11047,7 +11052,9 @@ a.text-dark:focus {
 
 @media (min-width: 1200px) {
   .bg-hero {
-    background: linear-gradient(90deg, #0d73ba 60%, #ffffff 40%);
+    /* background: linear-gradient(90deg, #0d73ba 60%, #ffffff 40%); */
+    background: linear-gradient(to right, rgba(255, 255, 255, 0) 60%, #ffffff 40%), 
+              url("../img/pattern_atas.png") center center/cover no-repeat;
   }
 
   .nav-right-logo {
@@ -11061,8 +11068,9 @@ a.text-dark:focus {
 }
 
 .bg-umb-blue{
-  background-color: #0D73BA;
-  opacity: 1;
+  /* background-color: #0D73BA;
+  opacity: 1; */
+  background: url('../img/pattern_footer.png');
 }
 
 .text-umb-blue {

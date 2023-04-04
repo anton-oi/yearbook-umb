@@ -44,4 +44,11 @@ class AdminHomeController extends Controller
 
         return redirect(route('admin.landing'));
     }
+
+    public function deleteWisudawan($id)
+    {
+        MahasiswaCarouselItem::findOrFail($id)->delete();
+
+        return redirect()->back();
+    }
 }
