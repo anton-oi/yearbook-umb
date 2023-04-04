@@ -68,13 +68,7 @@
                                     <div class="border-top border border-5 border-primary" style="width: 40px; opacity: 0.4"></div>
                                     <span class="font-weight-light" style="font-size: 22px;">{{$item->jurusan}}</span>
                                 </div>
-                                <em>
-                                    <p style="font-size: 22px;" class="font-weight-light">
-                                        <blockquote>
-                                            "{{$item->quote}}"
-                                        </blockquote>
-                                    </p>
-                                </em>
+                                
                             </div>
                         </div>
                     </div>
