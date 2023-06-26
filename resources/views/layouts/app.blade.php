@@ -21,7 +21,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Dongle:wght@300;400;700&family=Source+Sans+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
     <!-- Option 1: Include in HTML -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
-
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js'></script>
+    @yield('headscript')
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
@@ -70,9 +71,9 @@
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                                                     <h6>
-                                                         {{ __('Logout') }}
-                                                     </h6>
+                                    <h6>
+                                        {{ __('Logout') }}
+                                    </h6>
                                 </a>
 
                                 <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
@@ -142,8 +143,19 @@
                         <div class="col-lg-3 col-md-6 col-sm-12 text-center my-sm-5">
                             <div class="logo-widget footer-widget float-lg-right">
                                 <figure class="logo-box"><a href="https://yearbookumb.com">
-                                    <img src="{{asset('img/Logo_UMB_Putih_besar.png')}}" alt="" height="150"></a>
+                                        <img src="{{asset('img/Logo_UMB_Putih_besar.png')}}" alt="" height="150"></a>
                                 </figure>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-2 col-md-6 col-sm-12 footer-widget">
+                            <div class="contact-widget footer-widget">
+                                <h6 class="footer-title mb-3 text-white font-bold">Links</h6>
+                                <div class="text-white footer-content-text">
+                                    <p><a class="text-white" href="events">Events</a></p>
+                                </div>
                             </div>
                         </div>
                         <div class="col-12 d-flex justify-content-center gap-3">

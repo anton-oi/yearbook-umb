@@ -140,6 +140,12 @@
                     <p>PDF Yearbook</p>
                   </a>
                 </li>
+                <li class="nav-item">
+                  <a href="events" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Events</p>
+                  </a>
+                </li>
               </ul>
             </li>
 

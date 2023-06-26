@@ -1,7 +1,9 @@
 <?php
 
+use App\Http\Controllers\Admin\AdminEventController as AdminAdminEventController;
 use App\Http\Controllers\Admin\AdminHomeController;
 use App\Http\Controllers\Admin\AdminYearbookController;
+use App\Http\Controllers\AdminEventController;
 use App\Http\Controllers\LandingController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -39,6 +41,13 @@ Route::middleware(['auth'])->group(function () {
                 Route::post('', [AdminYearbookController::class, 'store'])->name('admin.yearbook.store');
                 Route::delete('{id}', [AdminYearbookController::class, 'destroy'])->name('admin.yearbook.destroy');
             });
+            
+            Route::group(['prefix' => 'events'], function() {
+                Route::get('', [AdminAdminEventController::class, 'index'])->name('admin.events.index');
+                Route::get('/create', [AdminAdminEventController::class, 'create'])->name('admin.events.create');
+                Route::post('', [AdminAdminEventController::class, 'store'])->name('admin.events.store');
+                Route::delete('{id}', [AdminAdminEventController::class, 'destroy'])->name('admin.events.destroy');
+            });
         });
     });
 
@@ -50,5 +59,6 @@ Route::get('/yearbook', 'PdfController@index')->name('yearbook');
 Route::get('/pdf/{id}', 'PdfController@show')->name('yearbook.show');
 Auth::routes();
 Route::get('/home', 'HomeController@index');
-
+Route::get('/events', 'EventController@index');
+Route::get('/events/{id}', 'EventController@show')->name('event.detail');
 Route::get('/', [LandingController::class, 'index']);

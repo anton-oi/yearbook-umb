@@ -11011,6 +11011,12 @@ a.text-dark:focus {
     background: url('../img/pattern_atas.png');
   }
 
+  .bg-hero-full {
+    /* background: linear-gradient(90deg, #0d73ba 100%, #ffffff 40%); */
+    height: 60vh;
+    background: url('../img/pattern_atas.png');
+  }
+
   .nav-right-logo {
     height: 80px;
   }
