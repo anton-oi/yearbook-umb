@@ -35,10 +35,10 @@ class LoginController extends Controller
             return redirect('/admin/dashboard');
         }
 
-        return '/';
+        return redirect('/');
     }
 
-    /** 
+    /**
      * Create a new controller instance.
      *
      * @return void
