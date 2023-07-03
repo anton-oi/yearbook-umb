@@ -12,14 +12,17 @@
             right: null
             },
           initialView: 'dayGridMonth',
+          displayEventTime: false,
           events: [
-            {
-                groupId: 'testGroupId',
-                start: new Date(eventt.date),
-                end: new Date(eventt.date),
-                
-            }
-          ]
+              {
+                  groupId: 'testGroupId',
+                  start: new Date(eventt.date),
+                  end: new Date(eventt.date),
+                  display: 'block',
+                  backgroundColor: "#5ef211",
+                  color: '#378006',
+                }
+            ],
         });
         calendar.render();
       });
@@ -46,7 +49,7 @@
                 <div class=" {{$loop->first ? 'carousel-item active' : 'carousel-item'}}">
                     <div class="row">
                         <div class="col-lg-12 col-md-12 col-sm-12 d-flex justify-content-center">
-                            <img src="{{$item->url}}" class="rounded-lg" alt="Image" width="50%">
+                            <img src="{{$item->url}}" class="rounded-lg" alt="Image" style="max-height: 600px">
                         </div>
 
                     </div>
@@ -72,8 +75,8 @@
             <p class="font-weight-light" style="font-size: 4rem;">{{ $event->title }}</p>
             <p class="font-weight-light" style="font-size: 4rem;">{{ date('D, d M Y', strtotime($event->date))  }}</p>
             <p class="font-weight-light" style="font-size: 4rem;">MARK YOUR CALENDAR</p>
-            
-            <div id='calendar' style="width: 70%;font-size: 2rem;"></div>
+
+            <div id='calendar' style="width: 75%;font-size: 2rem;"></div>
 
             <div id="datetimer" class="d-flex flex-row align-items-center gap-4" style="font-size: 4vw;">
                 <div class="d-flex">
