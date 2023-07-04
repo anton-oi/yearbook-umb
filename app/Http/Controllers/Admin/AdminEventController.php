@@ -54,7 +54,7 @@ class AdminEventController extends Controller
             'location' => request('location'),
         ]);
         $covers = request()->file('covers');
-      
+
         foreach ($covers as $cover) {
             $newFileName = time().'.'.$cover->extension();
             $imgUrl = $cover->storePubliclyAs('/image/event', time().$cover->getClientOriginalName(), 'public');

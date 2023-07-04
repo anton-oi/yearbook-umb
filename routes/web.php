@@ -23,12 +23,14 @@ use Illuminate\Support\Facades\Route;
 Route::middleware(['auth'])->group(function () {
     Route::middleware(['admin'])->group(function () {
         Route::get('/pdf/create', 'PdfController@create');
+        Route::get('/pdf/{id}/edit',[AdminYearbookController::class, 'edit'])->name('edit.pdf');
+        Route::put('/pdf/{id}/update',[AdminYearbookController::class, 'update'])->name('update.pdf');
         Route::post('/pdf', 'PdfController@store');
         Route::delete('/pdf/delete/{id}', 'PdfController@destroy');
 
         Route::group(['prefix' => 'admin'], function() {
             Route::get('dashboard', [AdminHomeController::class, 'index']);
-            
+
             Route::group(['prefix' => 'landing'], function() {
                 Route::get('', [AdminHomeController::class, 'indexLanding'])->name('admin.landing');
             });
@@ -41,7 +43,7 @@ Route::middleware(['auth'])->group(function () {
                 Route::post('', [AdminYearbookController::class, 'store'])->name('admin.yearbook.store');
                 Route::delete('{id}', [AdminYearbookController::class, 'destroy'])->name('admin.yearbook.destroy');
             });
-            
+
             Route::group(['prefix' => 'events'], function() {
                 Route::get('', [AdminAdminEventController::class, 'index'])->name('admin.events.index');
                 Route::get('/create', [AdminAdminEventController::class, 'create'])->name('admin.events.create');

@@ -65,6 +65,11 @@
                                     </i>
                                     Delete
                                 </button>
+                                <a href="{{route('edit.pdf', $pdf->id)}}" class="btn btn-info btn-sm">
+                                    <i class="fas fa-edit">
+                                    </i>
+                                    Edit
+                                </a>
                             </form>
                         </td>
                     </tr>

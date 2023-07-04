@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('content') 
+@section('content')
     <div class="background-big">
         <div class="container">
         <div class="pt-5">
@@ -19,7 +19,14 @@
                         @endif
                         @foreach ($pdfs as $pdf)
                         <div>
-                            <embed src="{{asset('storage/pdf/'.$pdf->url) }}#toolbar=0&navpanes=0&scrollbar=0" width="100%" height="300" type="application/pdf" alt="pdf" />
+                            <!-- <embed src="{{asset('storage/pdf/'.$pdf->url) }}#toolbar=0&navpanes=0&scrollbar=0" width="100%" height="300" type="application/pdf" alt="pdf" /> -->
+                            @if ($pdf->cover)
+                            <img class="w-100" src="{{$pdf->cover}}" alt="{{$pdf->name}} Cover">
+                            @else
+                            <div class="text-center">
+                                <img class="w-50 ml-5" src="/img/default-pdf.png" alt="Default Cover">
+                            </div>
+                            @endif
                             <h4 class="text-bold mt-3">{{$pdf->name}}</h4>
                             <div class="d-flex mb-3">
                                 <div class="mr-3">
@@ -33,8 +40,8 @@
                             </div>
                         </div>
                         @endforeach
-                    </div>     
-                    <div class="mx-3">               
+                    </div>
+                    <div class="mx-3">
                         {{ $pdfs->links() }}
                     </div>
                 </div>
@@ -85,12 +92,12 @@
                     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
                 }
             });
-    
+
             var formData = {
                 password: $('#password').val(),
                 file: file
             };
-    
+
             $.ajax({
                 type: "GET",
                 url: "download/pdf",
@@ -102,7 +109,7 @@
                     console.log(data)
                     $('#alert').append(`
                     <div class="alert alert-danger" role="alert">
-                        `+data.responseJSON.message+`   
+                        `+data.responseJSON.message+`
                     </div>
                     `)
                 }
