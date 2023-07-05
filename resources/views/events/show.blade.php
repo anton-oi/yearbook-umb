@@ -32,53 +32,50 @@
 @section('content')
 <div class="background-big">
     <nav aria-label="breadcrumb">
-        <ol class="breadcrumb text-dark">
+        <ol class="breadcrumb text-dark justify-content-center mt-3">
             <li class="breadcrumb-item"><a class="text-dark" href="/">HOME</a></li>
             <li class="breadcrumb-item"><a class="text-dark" href="#">EVENT</a></li>
         </ol>
     </nav>
-    <div class="jumbotron jumbotron-fluid bg-hero-full">
-        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" style="width: 100%;">
-            <ol class="carousel-indicators">
-                @foreach($event->covers as $item)
-                <li data-target="#carouselExampleIndicators" data-slide-to="{{$item->id}}" class="{{$loop->first ? 'active' : ''}}"></li>
-                @endforeach
-            </ol>
-            <div class="carousel-inner">
-                @foreach($event->covers as $item)
-                <div class=" {{$loop->first ? 'carousel-item active' : 'carousel-item'}}">
-                    <div class="row">
-                        <div class="col-lg-12 col-md-12 col-sm-12 d-flex justify-content-center">
-                            <img src="{{$item->url}}" class="rounded-lg" alt="Image" style="max-height: 600px">
+    <div class="container-fluid bg-hero-full py-5" >
+        <div class="row">
+            <div class="col-12 d-flex justify-content-center">
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        @foreach($event->covers as $item)
+                        <li data-target="#carouselExampleIndicators" data-slide-to="{{$item->id}}" class="{{$loop->first ? 'active' : ''}}"></li>
+                        @endforeach
+                    </ol>
+                    <div class="carousel-inner">
+                        @foreach($event->covers as $item)
+                        <div class="carousel-item {{$loop->first ? 'active' : ''}}">
+                            <img src="{{$item->url}}" class="d-block mx-auto w-55" alt="Image">
                         </div>
-
+                        @endforeach
                     </div>
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
                 </div>
-                @endforeach
             </div>
-            <button class="carousel-control-prev" type="button" data-target="#carouselExampleIndicators" data-slide="prev">
-                <div class="bg-grey text-center d-flex justify-content-center p-4 rounded-circle">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                </div>
-
-            </button>
-            <button class="carousel-control-next" type="button" data-target="#carouselExampleIndicators" data-slide="next">
-                <div class="bg-grey text-center d-flex justify-content-center p-4 rounded-circle">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                </div>
-            </button>
         </div>
     </div>
+    <div class="top-150"></div>
     <div class="container">
         <div class="py-5 d-flex flex-column justify-content-center align-items-center text-center">
-            <h3 style="font-size: 5rem; letter-spacing: 3px;">Don't Miss It!</h3>
-            <p class="font-weight-light" style="font-size: 4rem;">{{ $event->title }}</p>
-            <p class="font-weight-light" style="font-size: 4rem;">{{ date('D, d M Y', strtotime($event->date))  }}</p>
-            <p class="font-weight-light" style="font-size: 4rem;">MARK YOUR CALENDAR</p>
+            <h3 style="font-size: 3rem; letter-spacing: 3px;">Don't Miss It!</h3>
+            <p class="font-weight-light" style="font-size: 2rem;">{{ $event->title }}</p>
+            <p class="font-weight-light" style="font-size: 2rem;">{{ date('D, d M Y', strtotime($event->date))  }}</p>
+            <p class="fw-bold" style="font-size: 2rem;">MARK YOUR CALENDAR !</p>
 
-            <div id='calendar' style="width: 75%;font-size: 2rem;"></div>
+            <div id='calendar' style="width: 100%;font-size: 2rem;"></div>
 
-            <div id="datetimer" class="d-flex flex-row align-items-center gap-4" style="font-size: 4vw;">
+            <div id="datetimer" class="d-flex flex-row align-items-center gap-4" style="font-size: 6vw; margin-top:30px;">
                 <div class="d-flex">
                     <span id="days"></span>
                     <span> Days</span>
@@ -100,7 +97,7 @@
                 </div>
             </div>
 
-            <p style="font-size: 5rem; letter-spacing: 3px;" id="graduate">To Graduation!</p>
+            <p style="font-size: 4rem; letter-spacing: 3px;" id="graduate">To Graduation!</p>
         </div>
     </div>
 </div>

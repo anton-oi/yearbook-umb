@@ -4,6 +4,7 @@
 <div class="background-big">
     <div class="container-fluid p-0 m-0">
         <div class="bg-hero px-5 py-5">
+
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a class="text-white" href="#">HOME</a></li>
@@ -12,8 +13,8 @@
                 </ol>
             </nav>
             <div class="row d-flex flex-row-reverse mb-5">
-                <div class="embed-responsive embed-responsive-1by1 col-12 col-lg-7 px-5">
-                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/-_hKLLiLCT4" frameborder="0" width="100%" height="100%"></iframe>
+                <div class="embed-responsive embed-responsive-16by9 col-12 col-lg-7 px-5">
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/2kI_3kJ7kWg" frameborder="0" width="100%" height="100%"></iframe>
                 </div>
                 <div class="col-12 col-lg-5 px-5">
                     <div class="row">
@@ -24,8 +25,7 @@
                                 Yearbook
                             </h1>
                             <div class="bg-white" style="height: 15px; opacity: 0.4"></div>
-
-                            <a href="/yearbook" class="btn btn-lg btn-download rounded-pill px-5 py-2 mt-5">DOWNLOAD</a>
+                            <a href="/yearbook" class="btn btn-lg btn-download rounded-pill px-5 py-2 mt-5">Yearbook</a>
                         </div>
                     </div>
                 </div>
@@ -53,7 +53,7 @@
                     <div class=" {{$loop->first ? 'carousel-item active' : 'carousel-item'}}">
                         <div class="row">
                             <div class="col-lg-6 col-md-12 col-sm-12">
-                                <img src="{{$item->image}}" class="rounded-lg" alt="Image" width="100%">
+                                <center><img src="{{$item->image}}" class="rounded-lg" alt="Image"><center>
                             </div>
                             <div class="col-lg-6 col-md-12 col-sm-12">
                                 <div class="d-flex justify-content-start align-items-center mt-5">

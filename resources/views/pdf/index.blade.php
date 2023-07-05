@@ -24,7 +24,7 @@
                             <img class="w-100" src="{{$pdf->cover}}" alt="{{$pdf->name}} Cover">
                             @else
                             <div class="text-center">
-                                <img class="w-50 ml-5" src="/img/default-pdf.png" alt="Default Cover">
+                                <img style="width:50%; height:50%;" src="/img/default-pdf.png" alt="Default Cover">
                             </div>
                             @endif
                             <h4 class="text-bold mt-3">{{$pdf->name}}</h4>

@@ -8,9 +8,9 @@
             <div>
                 <div class="row">
                     @foreach($events as $event)
-                    <div class="col-md-6 my-2">
+                    <div class="col-lg-6 col-md-12 col-sm-12 my-2">
                         <div class="card">
-                            <div class="row">
+                            <div class="row p-3">
                                 <div class="col-md-4 text-center display-2">
                                     <div class="badge badge-primary">{{ date('d', strtotime($event->date)) }}</div>
                                     <p style="margin-bottom: -34px !important;">{{ date('M', strtotime($event->date)) }}</p>
@@ -18,7 +18,7 @@
                                 </div>
                                 <div class="col-md-8">
                                     <div class="font-weight-light display-4">{{ $event->title }}</div>
-                                    <p class="font-weight-light" style="font-size: 40px;">{{ $event->location }}</p>
+                                    <p class="font-weight-light" style="font-size: 35px;">{{ $event->location }}</p>
                                     <a class="font-weight-light" href="{{route('event.detail', $event->id)}}" style="font-size: 40px;">Detail</a>
                                 </div>
                             </div>
