@@ -40,7 +40,7 @@
                 <p class="font-weight-light" style="font-size: 2em; letter-spacing: 3px;">Selamat datang menuju jalan yang baru. Kini saatnya untuk berjuang demi kehidupan di masa depan. </p>
             </div>
         </section>
-        
+
         <section class="mt-5 mb-5">
             <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" style="width: 100%;">
                 <ol class="carousel-indicators">
@@ -67,7 +67,7 @@
                                     <div class="border-top border border-5 border-primary" style="width: 40px; opacity: 0.4"></div>
                                     <span class="font-weight-light" style="font-size: 22px;">{{$item->jurusan}}</span>
                                 </div>
-                                
+
                             </div>
                         </div>
                     </div>
@@ -84,6 +84,46 @@
                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     </div>
                 </button>
+            </div>
+        </section>
+    </div>
+
+    <div class="container p-5">
+        <section class="border-bottom border-1 border-black my-5">
+            <div class="text-center">
+                <h2 style="font-size: 3rem; letter-spacing: 3px;">Events</h2>
+            </div>
+        </section>
+
+        <section class="mt-5 mb-5">
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" style="width: 100%;">
+                <div class="carousel-inner">
+                    <div class="row">
+                        @foreach($events as $event)
+                        <div class="col-md-6 my-2">
+                                <div class="card">
+                                    <div class="row">
+                                        <div class="col-md-4 text-center display-2">
+                                            <div class="badge badge-primary">{{ date('d', strtotime($event->date)) }}</div>
+                                            <p style="margin-bottom: -34px !important;">{{ date('M', strtotime($event->date)) }}</p>
+                                            <p class="m-0">{{ date('Y', strtotime($event->date)) }}</p>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="font-weight-light display-4">{{ $event->title }}</div>
+                                            <p class="font-weight-light" style="font-size: 40px;">{{ $event->location }}</p>
+                                            <a class="font-weight-light" href="{{route('event.detail', $event->id)}}" style="font-size: 40px;">Detail</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        @endforeach
+                    </div>
+                    <div class="row">
+                        <div class="col-12 text-center">
+                            <a href="events" class="btn btn-primary mt-4">See all</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </div>
