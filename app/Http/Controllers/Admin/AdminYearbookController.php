@@ -40,7 +40,7 @@ class AdminYearbookController extends Controller
         $file = $request->file('pdf');
         $newFileName = time().'.pdf';
 
-        $newFileName = time().'.'.request('cover')->extension();
+        //$newFileName = time().'.'.request('cover')->extension();
         $coverUrl = request('cover')->storePubliclyAs('/image/pdf-cover', time().request('cover')->getClientOriginalName(), 'public');
 
         pdf::create([
