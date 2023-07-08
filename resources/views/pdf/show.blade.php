@@ -24,7 +24,9 @@
 
                 zoom:1,
 
-
+                onLoad: function () {
+                    console.log('PDFNYA KELOAD ');
+                }
             };
 
             $('#flipbook').ipages(options);
